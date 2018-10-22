@@ -1,5 +1,5 @@
 <template>
     <div class="home">
-        首页1
+        分类1
     </div>
 </template>
