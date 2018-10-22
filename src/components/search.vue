@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-        搜索
+        搜索1
     </div>
 </template>
 <script>

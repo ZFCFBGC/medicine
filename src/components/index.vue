@@ -1,5 +1,5 @@
 <template>
-    <div class="gqg">
+    <div class="medicine">
         <router-view/>
         <mt-tabbar>
             <mt-tabbar fixed v-model="currentTab">

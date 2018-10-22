@@ -30,8 +30,7 @@ export default new Router({
           name: 'Classify',
           component:Classify,
           props:true
-        },
-        {
+        },{
           path: '/car',
           name: 'Car',
           component:Car,
