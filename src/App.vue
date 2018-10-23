@@ -6,11 +6,12 @@
 
 <script>
   import Vue from 'vue';
-  import axios from 'axios';
+  // import axios from 'axios';
   import Mint from 'mint-ui';
-  import 'mint-ui/lib/style.css';
   Vue.use(Mint);
-  Vue.prototype.$http=axios;
+  import httpclient from './httpclient'
+  import 'mint-ui/lib/style.css';
+  Vue.prototype.$http=httpclient;
   export default {
     name: 'App',
     data:function(){
@@ -27,5 +28,6 @@
 </script>
 
 <style>
-
+  *{margin:0;padding:0;}
+  ul{list-style:none;}
 </style>
