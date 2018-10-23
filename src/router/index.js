@@ -6,8 +6,8 @@ import Car from '@/components/car'
 import Mine from '@/components/mine'
 import Search from '@/components/search'
 import Index from '@/components/index'
-import Header from '@/components/classify/header'
-
+import Header from '@/components/classifyFloder/header'
+import Listcontent from '@/components/classifyFloder/Listcontent'
 
 Vue.use(Router)
 export default new Router({
@@ -35,9 +35,9 @@ export default new Router({
           props:true,
           children:[
             {
-              path:'head',
-              name:'head',
-              component:Header,
+              path:'listcontent',
+              name:'listcontent',
+              component:Listcontent,
               props:true
             }
           ]

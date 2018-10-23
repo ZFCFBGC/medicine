@@ -15,9 +15,7 @@
 
 <script>
 import Vue from 'vue';
-import { Navbar, TabItem } from 'mint-ui';
-Vue.component(Navbar.name, Navbar);
-Vue.component(TabItem.name, TabItem);
+
 export default {
     data(){
         return {
@@ -32,11 +30,12 @@ export default {
 
 
 
-<style scope>
+<style scoped>
 header{
    width: 100%;    
    height: 1.1rem;  
    background-color: #fff;
+    position: fixed;
 }
 header i{
     display: block;
@@ -92,10 +91,17 @@ header .head-input .div-input{
     color: #b8b8be;
     cursor: text;
     width: 5.3rem;
+    position: relative;
 }
 
 header .head-input .div-input .fa-search{
+    position: absolute;
+    left: 0.3rem;
+    top:0.15rem;
+}
 
+header .head-input .div-input span{
+    margin-left: 0.4rem;
 }
 </style>
 
