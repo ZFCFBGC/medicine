@@ -6,6 +6,9 @@ import Car from '@/components/car'
 import Mine from '@/components/mine'
 import Search from '@/components/search'
 import Index from '@/components/index'
+import Header from '@/components/classify/header'
+
+
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -29,7 +32,15 @@ export default new Router({
           path: '/classify',
           name: 'Classify',
           component:Classify,
-          props:true
+          props:true,
+          children:[
+            {
+              path:'head',
+              name:'head',
+              component:Header,
+              props:true
+            }
+          ]
         },{
           path: '/car',
           name: 'Car',
