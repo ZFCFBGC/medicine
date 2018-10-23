@@ -8,9 +8,13 @@
   import Vue from 'vue';
   // import axios from 'axios';
   import Mint from 'mint-ui';
+  import 'mint-ui/lib/style.css';
+  import './css/base.css';
+  import './css/common.css';
+  import rem from './rem.js';
+  rem();
   Vue.use(Mint);
   import httpclient from './httpclient'
-  import 'mint-ui/lib/style.css';
   Vue.prototype.$http=httpclient;
   export default {
     name: 'App',
