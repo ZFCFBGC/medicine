@@ -6,6 +6,7 @@ import Car from '@/components/car'
 import Mine from '@/components/mine'
 import Search from '@/components/search'
 import Index from '@/components/index'
+import Login from '@/components/login'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -41,6 +42,11 @@ export default new Router({
           component:Mine,
           props:true
       }]
+    },{
+      path: '/login',
+      name: 'Login',
+      component: Login,
+      props:true
     }
   ]
 })
