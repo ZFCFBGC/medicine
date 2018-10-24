@@ -1,11 +1,11 @@
 <template>
-    <div class="user_page">
+    <div class="user_page" >
         <div class="user_top">
             <span class="city_area"><i class="icon iconfont icon_address"></i>广东</span>
             <div class="photo"></div>
             <div class="login_btn">
-                <a >登录</a> /
-                <a>注册</a>
+                <a v-on:click="gologin">登录</a> /
+                <a @click="gologin">注册</a>
             </div>
             <div class="health_gift_mark">领取健康礼包</div>
             <div class="vip_part">
@@ -92,7 +92,19 @@
     </div>
 </template>
 <script>
-
+    export default {
+        data(){
+            return{}
+        },
+        methods:{
+            gologin(){console.log(1)
+                this.$router.push({name:'Login'})
+            }
+        },
+        created(){
+            console.log(2)
+        }
+    }
 </script>
 <style scoped>
 .user_page {
@@ -138,6 +150,7 @@
 }
 .user_page .user_top .login_btn a {
     color: #fff;
+    padding: 0.1rem;
 }
 .user_page .user_top .health_gift_mark {
     background: url("../../static/img/zgift.png") no-repeat 0 0;
