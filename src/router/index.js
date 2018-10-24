@@ -6,8 +6,8 @@ import Car from '@/components/car'
 import Mine from '@/components/mine'
 import Search from '@/components/search'
 import Index from '@/components/index'
-import Header from '@/components/classifyFloder/header'
 import Listcontent from '@/components/classifyFloder/Listcontent'
+import Login from '@/components/login'
 
 Vue.use(Router)
 export default new Router({
@@ -33,14 +33,14 @@ export default new Router({
           name: 'Classify',
           component:Classify,
           props:true,
-          children:[
-            {
-              path:'listcontent',
-              name:'listcontent',
-              component:Listcontent,
-              props:true
-            }
-          ]
+          // children:[
+          //   {
+          //     path:'listcontent',
+          //     name:'listcontent',
+          //     component:Listcontent,
+          //     props:true
+          //   }
+          // ]
         },{
           path: '/car',
           name: 'Car',
@@ -52,6 +52,11 @@ export default new Router({
           component:Mine,
           props:true
       }]
+    },{
+      path: '/login',
+      name: 'Login',
+      component: Login,
+      props:true
     }
   ]
 })

@@ -36,6 +36,7 @@ header{
    height: 1.1rem;  
    background-color: #fff;
     position: fixed;
+    z-index: 100;
 }
 header i{
     display: block;
