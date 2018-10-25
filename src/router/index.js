@@ -56,6 +56,9 @@ export default new Router({
       name: 'Login',
       component: Login,
       props:true
+    },{
+      path:'/',
+      redirect:'/home'
     }
   ]
 })

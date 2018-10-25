@@ -3,7 +3,7 @@
         <i class="fa fa-medkit"></i>
         <span class="place">上海</span>
         <i class="fa fa-user-md"></i>
-        <div class="head-input">
+        <div class="head-input" @click="gosearch">
             <div class="div-input">
                 <i class="fa fa-search"></i>
                 <span>输入商品名称</span>
@@ -23,7 +23,9 @@ export default {
         }
     },
     methods:{
-
+        gosearch(){
+            this.$router.push({path:'/search'})
+        }
     }
 }
 </script>

@@ -69,13 +69,13 @@ export default {
     overflow: hidden;
     float: left;
     background-color: #f0f0f0;
-    height: 14rem;
+    height: 14.2rem;
     overflow: scroll;
 }
 .tabnav{
     height: 100%;
     overflow: auto;
-    padding-bottom: 1.1733333333333333rem;
+    /* padding-bottom: 1.1733333333333333rem; */
     width: 100%;
     float: left;
     -webkit-overflow-scrolling: touch;

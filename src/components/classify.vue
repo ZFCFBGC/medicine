@@ -3,8 +3,8 @@
         <Head></Head>
         <img src="static/img/askfordoctor.png" class="famous-doctor"/>
         <div style="height:2.3rem;width:100%"></div>
-        <List @getmsg="getmsg"></List>        
-        <Listcontent :content="currentContent"></Listcontent>
+        <list @getmsg="getmsg"></list>        
+        <listcontent :content="currentContent"></listcontent>
     </div>
 </template>
 
