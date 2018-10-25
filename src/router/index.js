@@ -31,7 +31,15 @@ export default new Router({
           path: '/classify',
           name: 'Classify',
           component:Classify,
-          props:true
+          props:true,
+          // children:[
+          //   {
+          //     path:'listcontent',
+          //     name:'listcontent',
+          //     component:Listcontent,
+          //     props:true
+          //   }
+          // ]
         },{
           path: '/car',
           name: 'Car',
@@ -53,6 +61,9 @@ export default new Router({
       name: 'Detail',
       component: Detail,
       props:true
+    },{
+      path:'/',
+      redirect:'/home'
     }
   ]
 })
