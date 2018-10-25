@@ -48,10 +48,6 @@ export default {
         
 
     },
-    // components:{
-    //     Listcontent:Listcontent,
-        
-    // },
     methods:{
         showcontent(content){
             if(this.currentContent){
@@ -73,6 +69,8 @@ export default {
     overflow: hidden;
     float: left;
     background-color: #f0f0f0;
+    height: 14rem;
+    overflow: scroll;
 }
 .tabnav{
     height: 100%;
@@ -92,6 +90,7 @@ export default {
 }
 .tabnav .active{
     background-color: #fff;
+    border-left: 0.05rem #f00 solid;
 }
 .tabnav li span{
     height: 1.3066666666666666rem;

@@ -63,8 +63,8 @@ export default {
     background-color: #fff;
     /* float: right; */
     width: 69%;   
-    height: 100%;
-    overflow-y: auto;
+    height: 14rem;
+    overflow: scroll;
 }
 
 .listcontent .mint-swipe{

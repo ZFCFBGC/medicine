@@ -3,7 +3,7 @@
         <div class="list-item" v-for="item in msg" :key="item.id">
             <h4>{{item.name}}</h4>
             <ul>
-                <li v-for="listitem in item.thridCategory" :key="listitem.id">
+                <li v-for="listitem in item.thridCategory" :key="listitem.id" @click="go(listitem.id,listitem.name)">
                     <div class="listitem-img">
                         <img :src="listitem.icon" >
                     </div>
@@ -23,8 +23,8 @@ export default {
     },
     props:['msg'],
     methods:{
-        go(){
-            this.$router.push({path})
+        go(id,name){
+            this.$router.push({path:'/searchlist',params:{id:id,name:name}})
         }
     }
 }
