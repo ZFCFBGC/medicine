@@ -4,7 +4,7 @@
             <img :src="data.picUrl" alt="">
         </div>
         <ul class="list_ul">
-            <li v-for="(item,idx) in data.goodProducts" :key="item.id">
+            <li v-for="(item,idx) in data.goodProducts" :key="item.id" @click="goDetail(item.itemid)">
                 <div class="img_box">
                     <img :src="item.productImg" alt="">
                     <p class="title">{{item.productName}}</p>
@@ -24,8 +24,7 @@
         },
         watch:{
             　list: {
-            　　　handler(newValue, oldValue) {
-            　　　　 console.log(2,newValue)
+            　　　handler(newValue, oldValue){
                     this.data=newValue
             　　　},
             　　　deep: true
@@ -35,7 +34,15 @@
 
         },
         methods:{
-
+            goDetail(itemCode){
+                this.$router.push({
+                    path:'/detail',
+                    query:{
+                        itemCode,
+                        timestamp:Date.now(),
+                    }
+                });
+            }
         }
     }
 </script>

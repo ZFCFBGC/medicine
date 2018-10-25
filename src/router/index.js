@@ -7,6 +7,7 @@ import Mine from '@/components/mine'
 import Search from '@/components/search'
 import Index from '@/components/index'
 import Login from '@/components/login'
+import Detail from '@/components/detail'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -46,6 +47,11 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login,
+      props:true
+    },{
+      path: '/detail',
+      name: 'Detail',
+      component: Detail,
       props:true
     }
   ]

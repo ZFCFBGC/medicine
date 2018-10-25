@@ -154,7 +154,6 @@
                     locatecityname: '广州',
                     locateprovinceid: 20,
                 }).then(res=>{
-                    console.log(123,res.data);
                     this.grabTogether=res.data.grabTogether;
                     this.goodTopic=res.data.goodTopic;
                 })
