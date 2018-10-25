@@ -6,7 +6,6 @@ import Car from '@/components/car'
 import Mine from '@/components/mine'
 import Search from '@/components/search'
 import Index from '@/components/index'
-import Listcontent from '@/components/classifyFloder/Listcontent'
 import Login from '@/components/login'
 
 Vue.use(Router)
