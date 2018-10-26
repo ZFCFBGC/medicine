@@ -8,6 +8,7 @@ import Search from '@/components/search'
 import Index from '@/components/index'
 import Login from '@/components/login'
 import SearchList from '@/components/category/searchList'
+import Detail from '@/components/detail'
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -31,7 +32,15 @@ export default new Router({
           path: '/classify',
           name: 'Classify',
           component:Classify,
-          props:true
+          props:true,
+          // children:[
+          //   {
+          //     path:'listcontent',
+          //     name:'listcontent',
+          //     component:Listcontent,
+          //     props:true
+          //   }
+          // ]
         },{
           path: '/car',
           name: 'Car',
@@ -53,6 +62,14 @@ export default new Router({
       name:'SearchList',
       component:SearchList,
       props:true
+    },{
+      path: '/detail',
+      name: 'Detail',
+      component: Detail,
+      props:true
+    },{
+      path:'/',
+      redirect:'/home'
     }
   ]
 })
