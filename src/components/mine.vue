@@ -1,7 +1,7 @@
 <template>
     <div class="user_page" >
         <div class="user_top">
-            <span class="city_area"><i class="icon iconfont icon_address"></i>广东</span>
+            <span class="city_area"><i class="icon iconfont icon_address fa fa-map-marker"></i>广东</span>
             <div class="photo"></div>
             <div class="login_btn">
                 <a v-on:click="gologin">登录</a> /
@@ -27,63 +27,63 @@
         </div>
         <div class="order_part">
             <ul class="order_type">
-                <li data-ywpoint="userpage_myorder_0_unpaidorder_0_0">
-                    <i class="icon iconfont icon_zhifu"></i> 
+                <li >
+                    <i class="icon iconfont icon_zhifu fa fa-usd"></i> 
                     <span class="order_type_name">待支付</span>
                 </li> 
-                <li data-ywpoint="userpage_myorder_0_receivingorder_0_0">
-                    <i class="icon iconfont icon_daishouhuo"></i> 
+                <li>
+                    <i class="icon iconfont icon_daishouhuo fa fa-archive"></i> 
                     <span class="order_type_name">待收货</span>
                 </li> 
-                <li data-ywpoint="userpage_myorder_0_commentorder_0_0">
-                    <i class="icon iconfont icon_flower"></i> 
+                <li>
+                    <i class="icon iconfont icon_flower fa fa-pencil-square-o"></i> 
                     <span class="order_type_name">待评价</span>
                 </li> 
-                <li data-ywpoint="userpage_myorder_0_refundorder_0_0">
-                    <i class="icon iconfont icon_tuihuo"></i> 
+                <li>
+                    <i class="icon iconfont icon_tuihuo fa fa-repeat"></i> 
                     <span class="order_type_name">退换货</span>
                 </li>
             </ul> 
             <div data-ywpoint="userpage_myorder_0_allorder_0_0" class="all_order">全部订单
-			    <i class="icon iconfont icon_rightarrow"></i>
+			    <i class="icon iconfont icon_rightarrow fa fa-angle-right" aria-hidden="true"></i>
             </div>
         </div>
         <div class="user_part">
             <ul class="user_part_ul">
-                <li data-ywpoint="userpage_myfavorite_0_0_0_0">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAuCAYAAAB5/AqlAAAAAXNSR0IArs4c6QAABZBJREFUaAXtWlso5VsY/0hyJDw44y7jxUTmBTke3CU0TcKE02QaIh4QhTpe5kWi3KMRCU3jUi4h58EkaZpm3B4cieTygHAktySJs37fOX/+zGbvbe+zbXvmq7X32v//ty6/9V3Wt769jOiKTETVRxQvUX4VxVSUx0inYtJ/i/KXKJOinIlCRvgQZCXK76LY4ocB0ZbA8lGUfWPxAUkyyGfPnlFvby8dHh7SxcXFoyyYOzAAiyAIDthMINHfRInEi2/fvpGlpaX4+fhpb2+P/P39aX5+HmD+hERhk1RSUmIwIIHH2tqaMaEu6Dkk+ocophC5hYUFHhoMHRwckJUV3A+dQqLsXQ0NJNDJzNAUQH8I+gnU0MSsc4lOT08/yBrqFOj4+DhlZmYaPtCGhgYC2M+fP+scrM4kij2tq6uLAVZXVxsu0A8fPtDR0RED7Ovro9XVVZ2C1ZlEobYgNzc3Ojs7I11L9V5A1bWxr1+/0szMDNnZ2VFnZycDbm5uJqizrsj46dOna7GxsSqPd3JyQq9evaLt7W2V20jSTElJIR8fHwoPD2eQTU1NSvt4//69VtTceHl52am7u1vpgBLD0NAQbW5uUmVlpfTozm8cl+CEjI2NKTU1lXlzc3P5u7a2ls7Pz29t/+XLF8rJyaGsrKxbeVR9obbqSqpXX19PAKGM2tra6Pj4mCIiItg+wR8dHc0HYziknp4ehV1AYxISEuj09JQGBwcJDkwTUgsovCYGBcG+ampqlI7d2NjIPGlpadd4ISmQIs2AlJOSkmhtbY3tGnzQAizYfUktoP39/TyYk5MTjwfVk7YMRROA05qdnSUHBwd6+fLlNZbk5GSysbEhqCeclZyKiopoZGSE201NTbFdQ/rFxcVyNrXqagFtb2/nzjGRwMBA2tnZITiL20iSJpyQiQlSU1dkbm5O6enp/EC+1WAxy8rKyNTUlD00Fqmuro7bV1RUSKmRq45UrBmJJNg7VXh3d3fJ3t6eWdfX12lycpKioqJ41VdWVnhi8n7A7+zszDa2uLhIrq6u8tdc39jYIOH12SEtLS0xr6+vL9t+eXk55eXlXbZBjIxFhcceHh6+fK6sYmT0b6JTZYnCacAxhIaGsspFRkaySmGy2BNvktwJKQIJfkgrMTGRA4jS0lLetuDg4uPjr4EEL9T2yZMn9OnTJ+ro6MAjtYglis7vcvPoEXsn7Ka1tZVgXyCAj4uLY2+6sLBwTT09PT1pbm6OU48xMTHMr+gDxzZvb+/LV8hGTkxMKMxftbS00Nu3b3mBkLGE+t8kbGNIjEkkSdRIJI8K9/f3f5Fe3PVtZmZGW1tbl7kYLI6XlxcDki/A2NgYBQUFEZwW1Pqmfd4cIyQkhEZHRxkcAHh4eNxkufwdEBCg9PRTUFBA0BCQBNREAgkPqIygrrKEEwcBhYWF9ObNG+749evX/OwuJ6RoDGwdAIoI6i6QaAvHFBYWpqgbfgaJ2tp+/4cDLPUdOJCZvw8hQHd3dycRYREirODgYHJ0dGS7g4NxcXFR2i00o6qq6ju7VNpQBQZJoio7o9v6hFrm5+fzayTBYUeIhyF9VUCiIaQg97C3jaXJc40lisHhjbFNwANDtRE1DQwM0IsXLzSZm1baak2imA02dylQB0hIEvGsPpHGqiuBycjI4P0VvxEJQR31ibQ2G/ylgeMUbFY6jukT0OsBqIYzy87OJoR7UtCvYXdaba4VZySfEY5SiiIWOY8u61p1RvKJ6xNI+by0ZqPyTvWx/hOoPkpFkzlBoqfo4K6UiCYDPGRbWd6Y/9rH5SM+0D7kpP6PsXFI/4+2sb38MNdvcI1sC/dx/Pz8OH/6mNUYc0cOWHbHaFPgm4JEQYZ6RQ4gP4pyIAEFWISDhnTpcUbgmRKFLz3+A+KduUBeRWuzAAAAAElFTkSuQmCC" alt="" class="img-icon" /> 
+                <li >
+                    <i class="fa fa-heartbeat icon iconfont"></i>
                     <span class="part_name">健康档案</span>
                 </li> 
-                <li data-ywpoint="userpage_myfavorite_0_0_0_0">
-                    <i class="icon iconfont icon_shoucang"></i> 
+                <li >
+                    <i class="icon iconfont icon_shoucang fa fa-star-o" aria-hidden="true"></i> 
                     <span class="part_name">我的收藏</span>
                 </li> 
-                <li data-ywpoint="userpage_myhistory_0_0_0_0">
-                    <i class="icon iconfont icon_zuji"></i> 
+                <li >
+                    <i class="icon iconfont icon_zuji fa fa-eye"></i> 
                     <span class="part_name">看过买过</span>
                 </li> 
-                <li data-ywpoint="userpage_mycommonlist_0_0_0_0">
-                    <i class="icon iconfont icon_changyongqingdan"></i> 
+                <li >
+                    <i class="icon iconfont icon_changyongqingdan fa fa-list-alt"></i> 
                     <span class="part_name">常用清单</span>
                 </li> 
-                <li data-ywpoint="userpage_inquiryrecord_0_0_0_0">
-                    <i class="icon iconfont icon_wenzhenjilu"></i> 
+                <li >
+                    <i class="icon iconfont icon_wenzhenjilu fa fa-clock-o"></i> 
                     <span class="part_name">问诊记录</span>
                 </li> 
-                <li data-ywpoint="userpage_addressmanagement_0_0_0_0">
-                    <i class="icon iconfont icon_dizhiguanli"></i> 
+                <li >
+                    <i class="icon iconfont icon_dizhiguanli fa fa-location-arrow"></i> 
                     <span class="part_name">地址管理</span>
                 </li> 
-                <li data-ywpoint="userpage_accountmanagement_0_0_0_0">
-                    <i class="icon iconfont icon_account"></i> 
+                <li >
+                    <i class="icon iconfont icon_account fa fa-user"></i> 
                     <span class="part_name">账号管理</span>
                 </li> 
-                <li data-ywpoint="userpage_afterservice_0_0_0_0">
-                    <i class="icon iconfont icon_ermai"></i> 
+                <li >
+                    <i class="icon iconfont icon_ermai fa fa-assistive-listening-systems"></i> 
                     <span class="part_name">售后服务</span>
                 </li> 
-                <li data-ywpoint="userpage_setting_0_0_0_0">
-                    <i class="icon iconfont icon_shezhi"></i> 
+                <li >
+                    <i class="icon iconfont icon_shezhi fa fa-cog"></i> 
                     <span class="part_name">设置</span>
                 </li>
             </ul>
@@ -236,7 +236,7 @@
     padding-top: .4rem;
 }
 .user_page .order_part .order_type li .iconfont {
-    font-size: .64rem;
+    /* font-size: .64rem; */
     color: #898989;
     position: relative;
 }
@@ -256,6 +256,8 @@
 .user_page .order_part .all_order .iconfont {
     position: absolute;
     right: .4rem;
+    height: 1.28rem;
+    line-height: 1.28rem;
 }
 .iconfont {
     font-size: .53333333rem;
@@ -292,7 +294,7 @@
     padding-top: .21333333rem;
 }
 .user_page .user_part .user_part_ul li .iconfont {
-    font-size: .64rem;
+    /* font-size: .64rem; */
     color: #979797;
 }
 </style>

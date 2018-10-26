@@ -10,6 +10,20 @@ let filterUrl = (_url) => {
 
 export default {
   get(_url, _params = {}) {
+    let now = Date.now();
+    _params = Object.assign(_params,{token:'',
+    demandcartkey:'', 
+    cartkey: '',
+    provinceid: 20,
+    province: 20,
+    provincename: '广东',
+    tradername: 'yw_app',
+    trader: 'h5',
+    closesignature: 'yes',
+    signature_method: 'md5',
+    signature: '****',
+    siteid: 9,
+    timestamp: now});
     return new Promise((resolve, reject) => {
       axios({
         url: filterUrl(_url),
@@ -23,7 +37,20 @@ export default {
     })
   },
   post(_url, _params = {}) {
-
+    let now = Date.now();
+    _params = Object.assign(_params,{token:'',
+    demandcartkey:'', 
+    cartkey: '',
+    provinceid: 20,
+    province: 20,
+    provincename: '广东',
+    tradername: 'yw_app',
+    trader: 'h5',
+    closesignature: 'yes',
+    signature_method: 'md5',
+    signature: '****',
+    siteid: 9,
+    timestamp: now,});
     return new Promise((resolve, reject) => {
       axios({
         url: filterUrl(_url),

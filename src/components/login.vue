@@ -107,19 +107,7 @@
                     this.err = false;
                     let now = Date.now();
                     this.$http.get('yywpassport/customer/sendsms',{
-                        token:'',
-                        demandcartkey:'', 
-                        cartkey: '',
-                        provinceid: 20,
-                        province: 20,
-                        provincename: '广东',
-                        tradername: 'yw_app',
-                        trader: 'h5',
-                        closesignature: 'yes',
-                        signature_method: 'md5',
                         timestamp: now,
-                        signature: '****',
-                        siteid: 9,
                         telphone: 15570064784,
                         usetype: 1,
                         os: 'h5',
@@ -152,19 +140,7 @@
             getyzm(){
                 let now = Date.now();
                 this.$http.get('yywpassport/appgetpiccode',{
-                    token:'',
-                    demandcartkey:'', 
-                    cartkey: '',
-                    provinceid: 20,
-                    province: 20,
-                    provincename: '广东',
-                    tradername: 'yw_app',
-                    trader: 'h5',
-                    closesignature: 'yes',
-                    signature_method: 'md5',
                     timestamp: now,
-                    signature: '****',
-                    siteid: 9
                 }).then(res=>{
                     this.verifyPicStr = 'data:image/jpg;base64,' + res.data.data.verifyPicStr;
                     this.verifypicuuid = res.data.data.verifyPicUuid;
