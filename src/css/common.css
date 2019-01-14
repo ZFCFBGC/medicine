@@ -1,0 +1,7 @@
+html,body{
+    background: #f0f0f0;
+    height: 100%;
+}
+::placeholder{
+    color: #ccc;
+}

@@ -1,0 +1,5 @@
+1.静态文件夹static:
+	assets:字体图标，格式SVG
+	img：本地图片存储位置
+	mock:json文件存储文件夹
+
